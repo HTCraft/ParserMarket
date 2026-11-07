@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Парсер: один раздел (проба)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/parse_yazsm.py",
+      "args": ["--start", "https://yazsm.ru/product/borduri/", "--out", "test.csv", "--debug"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Парсер: весь каталог",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/parse_yazsm.py",
+      "args": ["--out", "yazsm_products.csv"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Парсер: через видимый браузер",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/parse_yazsm.py",
+      "args": ["--browser", "always", "--headed"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
